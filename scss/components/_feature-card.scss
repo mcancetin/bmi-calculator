@@ -1,0 +1,30 @@
+.feature-card {
+  &__image {
+    margin-bottom: 4.5rem;
+    max-width: 100%;
+
+    @include respond(max-width, 48em) {
+      margin-bottom: 0;
+    }
+
+    & > img {
+      @include respond(max-width, 48em) {
+        max-width: 64px;
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2.4rem;
+  }
+
+  &__text {
+    color: $clr-dark-electric-blue;
+  }
+
+  @include respond(max-width, 48em) {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+  }
+}

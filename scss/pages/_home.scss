@@ -1,0 +1,250 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+  margin-bottom: 24rem;
+
+  @include respond(max-width, 64em) {
+    flex-direction: column;
+  }
+
+  &__heading {
+    color: $clr-gun-metail;
+    margin-bottom: 3.5rem;
+    text-wrap: balance;
+    @include respond(max-width, 64em) {
+      text-align: center;
+    }
+  }
+
+  &__left,
+  &__right {
+    flex: 1;
+  }
+
+  &__text {
+    color: $clr-dark-electric-blue;
+    max-width: 48ch;
+    @include respond(max-width, 64em) {
+      text-align: center;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    border-radius: 1.6rem;
+    padding: 3.2rem;
+    box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+    background: $clr-pure-white;
+  }
+
+  &__input-group {
+    display: flex;
+    gap: 2.4rem;
+
+    & > * {
+      flex: 1;
+    }
+  }
+
+  &__result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, $clr-blue, rgb(88, 125, 255) 100%);
+    border-radius: 3.2rem 200px 200px 3.2rem;
+    color: $clr-pure-white;
+    padding: 3.2rem;
+
+    & div:first-child {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.8rem;
+
+      & span:first-child {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__suggestion {
+    max-width: 21ch;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 2.4rem;
+    content: "";
+    width: 67.22%;
+    height: 73rem;
+    border-radius: 0 0 3.5rem 3.5rem;
+    z-index: -999;
+
+    background: linear-gradient(
+      -45deg,
+      rgb(214, 230, 254) 0%,
+      rgba(214, 252, 254, 0) 100%
+    );
+
+    @include respond(max-width, 64em) {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.bmi-desc {
+  display: flex;
+  gap: 13rem;
+  align-items: flex-end;
+  margin-bottom: 17rem;
+
+  @include respond(max-width, 48em) {
+    gap: 7.5rem;
+    align-items: center;
+  }
+
+  @include respond(max-width, 40em) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & > * {
+    flex: 1;
+  }
+
+  // &__img {
+  //   @include respond(max-width, 48em) {
+  //     max-width: 43.5rem;
+  //     margin-left: -10rem;
+  //   }
+  // }
+
+  &__right {
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    color: $clr-gun-metail;
+    margin-bottom: 3.5rem;
+  }
+
+  &__text {
+    color: $clr-dark-electric-blue;
+  }
+}
+
+.features {
+  position: relative;
+  margin-bottom: 21.6rem;
+
+  & .wrapper {
+    display: flex;
+    gap: 3.2rem;
+    padding: 7.2rem 0 9.6rem 0;
+
+    @include respond(max-width, 48em) {
+      flex-direction: column;
+      gap: 4rem;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98.3%;
+    height: 100%;
+
+    border-radius: 3.5rem;
+    background: linear-gradient(
+      -45deg,
+      rgb(214, 230, 254) 0%,
+      rgba(214, 252, 254, 0) 100%
+    );
+    opacity: 0.25;
+  }
+}
+
+.limits {
+  padding-bottom: 12rem;
+
+  overflow: hidden;
+  & .wrapper {
+    position: relative;
+  }
+
+  &__left {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include respond(max-width, 48em) {
+      position: initial;
+    }
+  }
+  &__heading {
+    color: $clr-gun-metail;
+    margin-bottom: 3.5rem;
+  }
+
+  &__text {
+    color: $clr-dark-electric-blue;
+    max-width: 55ch;
+
+    @include respond(max-width, 48em) {
+      margin-bottom: 5.6rem;
+    }
+  }
+
+  &__right {
+    transform: skew(-30deg);
+    display: grid;
+    justify-items: center;
+    justify-content: end;
+    grid-template-columns: repeat(2, minmax(auto, 36.5rem));
+    gap: 3.2rem;
+
+    @include respond(max-width, 48em) {
+      grid-column: 1/-1;
+    }
+
+    @include respond(max-width, 48em) {
+      transform: skew(0);
+    }
+
+    @include respond(max-width, 40em) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+
+    & article:first-of-type {
+      grid-column: 1/-1;
+      margin-right: 10%;
+
+      @include respond(max-width, 48em) {
+        margin-right: 0;
+        grid-column: auto;
+      }
+    }
+
+    & article:last-child {
+      @include respond(max-width, 48em) {
+        grid-column: 1/-1;
+      }
+    }
+  }
+
+  &__card {
+    transform: skew(30deg);
+
+    @include respond(max-width, 48em) {
+      transform: skew(0);
+    }
+  }
+}

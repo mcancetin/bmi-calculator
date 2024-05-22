@@ -1,0 +1,40 @@
+.text-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &__label {
+    color: $clr-dark-electric-blue;
+    margin-bottom: 0.8rem;
+  }
+
+  &__field {
+    position: relative;
+    width: 100%;
+    padding: 2rem 2.4rem;
+    border-radius: 1.2rem;
+    border: 1px solid $clr-border;
+    color: lighten($clr-gun-metail, 60%);
+
+    &:focus {
+      border: 1px solid $clr-blue;
+      color: $clr-gun-metail;
+    }
+
+    &:valid {
+      color: $clr-gun-metail;
+    }
+
+    &:hover {
+      border: 1px solid $clr-blue;
+    }
+  }
+
+  &__unit {
+    color: $clr-blue;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+  }
+}
