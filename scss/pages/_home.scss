@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 3.2rem;
-  margin-bottom: 24rem;
+  margin-bottom: 17.2rem;
 
   @include respond(max-width, 64em) {
     flex-direction: column;
@@ -101,7 +101,7 @@
   display: flex;
   gap: 13rem;
   align-items: flex-end;
-  margin-bottom: 17rem;
+  margin-bottom: 9.6rem;
 
   @include respond(max-width, 48em) {
     gap: 7.5rem;
@@ -117,15 +117,8 @@
     flex: 1;
   }
 
-  // &__img {
-  //   @include respond(max-width, 48em) {
-  //     max-width: 43.5rem;
-  //     margin-left: -10rem;
-  //   }
-  // }
-
   &__right {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
 
   &__heading {
@@ -140,7 +133,7 @@
 
 .features {
   position: relative;
-  margin-bottom: 21.6rem;
+  margin-bottom: 12rem;
 
   & .wrapper {
     display: flex;
