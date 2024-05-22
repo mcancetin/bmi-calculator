@@ -3,6 +3,7 @@
   font-size: $font-size;
   line-height: $line-height;
   font-weight: $fw-bold;
+  letter-spacing: -0.8px;
 }
 
 @mixin body($font-size, $line-height) {

@@ -113,11 +113,12 @@
     align-items: center;
   }
 
-  & > * {
-    flex: 1;
+  &__left {
+    flex: 1.19;
   }
 
   &__right {
+    flex: 1;
     margin-bottom: 4rem;
   }
 
