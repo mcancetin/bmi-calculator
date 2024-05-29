@@ -38,7 +38,7 @@ const imperialTemplate = `<div class="hero__input-group">
               </div>
             </div>`;
 
-let method = "metric";
+let method = "";
 
 function addMetricEventListeners() {
   const heightInputCM = document.querySelector("#height-cm");
@@ -101,6 +101,12 @@ function addImperialEventListeners() {
   weightInputLB.addEventListener("input", updateImperialBMI);
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  container.innerHTML = metricTemplate;
+  method = "metric";
+  addMetricEventListeners();
+});
+
 metricRadio.addEventListener("change", () => {
   container.innerHTML = metricTemplate;
   method = "metric";
@@ -153,10 +159,6 @@ function calculateIdealWeightRangeImperial(height) {
   };
 }
 
-function validateInput(value) {
-  return value === "" || isNaN(value) || value < 0;
-}
-
 function renderResult(bmi, range) {
   const unit = method === "metric" ? "kgs" : "lbs";
   const resultTemplate = `<div>
@@ -173,4 +175,8 @@ function renderResult(bmi, range) {
 
   const resultContainer = document.querySelector(".hero__result");
   resultContainer.innerHTML = resultTemplate;
+}
+
+function validateInput(value) {
+  return value === "" || isNaN(value) || value < 0;
 }
